@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=devuce-width, initial-scale=1.0">
+        <title>Formulario</title>
+
+    </head>
+
+    <body>
+        <div class="Dcha">
+        <h2>Agrega citas para comenzar</h2>
+        <form action="http://localhost:3000/submit" method="post" id="myForm">
+
+            <label for="text">Nombre Mascota</label>
+            <input type="text" id="nombremascota" name="nombremascota"><br><br>
+
+            <label for="text">Nombre Dueño</label>
+            <input type="text" id="nombredueño" name="nombredueño"><br><br>
+
+            <label for="text">Telefono</label>
+            <input type="tel" id="telefono" name="telefono"><br><br>
+
+            <label for="text">Fecha</label>
+            <input type="date" id="fecha" name="fecha"><br><br>
+
+            <label for="text">Hora</label>
+            <input type="datetime" id="hora" name="hora"><br><br>
+
+            <label for="text">Sintomas</label>
+            <input type="text" id="sintomas" name="sintomas"><br><br>
+            
+
+            <input type="submit" value="Agregar">
+
+        </form>
+        
+        <script src="pro.js">
+            
+            
+        </script>
+
+        </div>
+        <div class="Izda">
+            <h2>Agrega citas para comenzar</h2>
+            <textarea id="salida" rows="10" cols="30"></textarea>
+            <script src="readDB.js"></script>
+
+        </div>
+        
+
+        
+    </body>
+</html>
