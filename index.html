@@ -5,11 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=devuce-width, initial-scale=1.0">
         <title>Formulario</title>
+        <link rel="stylesheet" href="styles.css">
+
 
     </head>
 
     <body>
-        <div class="Dcha">
+        <div class="Izda">
         <h2>Agrega citas para comenzar</h2>
         <form action="http://localhost:3000/submit" method="post" id="myForm">
 
@@ -42,9 +44,9 @@
         </script>
 
         </div>
-        <div class="Izda">
+        <div class="Dcha">
             <h2>Agrega citas para comenzar</h2>
-            <textarea id="salida" rows="10" cols="30"></textarea>
+            <div id="salida" contenteditable="false"></div>
             <script src="readDB.js"></script>
 
         </div>

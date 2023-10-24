@@ -54,3 +54,27 @@ document.getElementById('myForm').addEventListener('submit', async (event) => {
         console.error('There was an error:', error);
     }
 });
+
+function deleteFromDB(id) {
+    const dbRequest = indexedDB.open('myDatabase');
+
+    dbRequest.onsuccess = function(event) {
+        const db = event.target.result;
+        const transaction = db.transaction(['formData'], 'readwrite');
+        const objectStore = transaction.objectStore('formData');
+        
+        const deleteRequest = objectStore.delete(id);
+
+        deleteRequest.onsuccess = function() {
+            console.log('Elemento borrado exitosamente!');
+        };
+
+        deleteRequest.onerror = function() {
+            console.error('Hubo un error al borrar el elemento.');
+        };
+    };
+
+    dbRequest.onerror = function() {
+        console.error('Error al abrir la base de datos.');
+    };
+}
