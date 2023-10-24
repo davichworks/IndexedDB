@@ -22,7 +22,7 @@ async function updateTextarea() {
         const output = data.map(item => `nombremascota: ${item.nombremascota}, nombredueño: ${item.nombredueño}, telefono: ${item.telefono},fecha: ${item.fecha}, hora: ${item.hora}, sintomas: ${item.sintomas} `).join('\n');
         document.getElementById('salida').textContent = output;
     } catch (error) {
-        console.error('There was an error:', error);
+        console.error('There was aaaan error:', error);
     }
 }
 
